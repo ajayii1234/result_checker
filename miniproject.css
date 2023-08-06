@@ -1,0 +1,38 @@
+*{
+		box-sizing:border-box;
+		}
+		div{
+			min-height: 0px;
+			border:0px solid blue;
+			background-color: yellow;
+		}
+		.parent-div{
+			border: 4px solid blue;
+		}
+		
+		.english{padding:5px 0px 0px 30px;
+
+		}
+		.subject{
+			padding:15px 0px 0px 30px;
+		}
+
+		.others{
+			padding-left: 30px;
+
+		}
+		.button{
+			padding-left: 39px;
+			font-family: algerian serif;
+
+		}
+		   .emoji {
+            font-size: 5em;
+        }
+
+        .remark{
+        	padding-top: 5em;
+        }
+        p,span{
+        	font-family: algerian serif;
+        }

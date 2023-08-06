@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Femi Ajayi</title>
+	
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+	
+	<link href="miniproject.css" rel="stylesheet" type="text/css">
+	
+	<link rel="icon" type="image/png" sizes="30x30" href="images/mylogo3.png">
+
+
+</head>
+
+<body>
+
+<div class="container mx-4 my-4 parent-div">
+
+	<div class="row">
+
+		<!--SUBJECTS-->
+		<div class="col-md-4">
+			<p class="mt-3 others">Subject</p>
+			<div class="col-md-9">
+			<p class="english">English</p>
+			<p class="subject">Maths</p>
+			<p class="subject">Chemistry</p>
+			<p class="subject">Biology</p>
+			<p class="subject">French</p>
+			</div>
+		</div>
+
+
+		<!--SCORES-->
+		<div class="col-md-4">
+			<p class="mt-3">Score</p>
+			<div class="col-md-9">
+			<input class="form-control my-3" type="number" value="" id="firstScore" 
+			onchange="showScoreOne()">
+			<input class="form-control my-3" type="number" value="" id="secondScore" 
+			onchange="showScoreTwo()">
+			<input class="form-control my-3" type="number" value="" id="thirdScore" 
+			onchange="showScoreThree()">
+			<input class="form-control my-3" type="number" value="" id="fourthScore" 
+			onchange="showScoreFour()">
+			<input class="form-control" type="number" value="" id="fifthScore" 
+			onchange="showScoreFive()">
+			</div>
+		</div>
+
+
+		<!--GRADES-->
+		<div class="col-md-4">
+			<p class="mt-3">Grade</p>
+			<div class="col-md-9" id="myGrade">
+			<input class="form-control my-3" type="text" value="" id="firstGrade">
+			<input class="form-control my-3" type="text" value="" id="secondGrade">
+			<input class="form-control my-3" type="text" value="" id="thirdGrade">
+			<input class="form-control my-3" type="text" value="" id="fourthGrade">
+			<input class="form-control my-3" type="text" value="" id="fifthGrade">
+			</div>
+		</div>
+	</div>
+
+
+	<!--BUTTON-->
+	<div class="row">
+		<div class="col-md-2 button">
+			<button class="btn btn-primary btn-lg" type="button" onclick="calculateTotalAndAverage()">Get Result</button>
+		</div>
+	</div>
+
+
+
+	<!--TOTAL SCORE-->
+	<div class="row mt-3">
+		<div class="col-md-4">
+            <p class="others">TOTAL</p>
+        </div>
+        <div class="col-md-4">
+            <span id="totalScore"></span>
+        </div>
+    </div>
+
+
+
+    <!--AVERAGE SCORE-->
+    <div class="row">
+		<div class="col-md-4">
+            <p class="others">Average</p>
+        </div>
+        <div class="col-md-4">
+            <span id="averageScore"></span>
+        </div>
+    </div>
+            
+
+    <!--REMARKS-->
+     <div class="row">
+     	<div class="col-md-4 remark">
+      		<p class="others">Remarks</p>
+  		</div>
+  		<div class="col-md-4">
+  			<span id="remark"></span>
+  		</div>
+
+    </div>	
+
+
+
+</div>
+
+
+
+
+<script type="text/javascript">
+
+
+
+	//FIRST SCORE AND GRADE
+	function showScoreOne() {
+	var score = parseFloat(document.getElementById('firstScore').value);
+
+	var grade;
+
+	if((score>=70) && (score<=100)){
+		grade="A";
+	}
+	else if((score >= 60) && (score < 70)){
+		grade="B";
+	}
+	else if((score >= 50) && (score < 60)){
+		grade="C";
+	}
+	else if((score >= 45) && (score < 50)){
+		grade="D";
+	}
+	else if((score >= 40) && (score < 45)){
+		grade="E";
+	}
+	else if((score >=0) && (score < 40)){
+		grade="F";
+	}
+	else{
+		grade="N/A"
+	}
+	
+
+	document.getElementById('firstGrade').value = grade
+	}
+
+
+
+	//SECOND SCORE AND GRADE
+	function showScoreTwo() {
+	var score = parseFloat(document.getElementById('secondScore').value);
+
+	var grade;
+
+	if((score>=70) && (score<=100)){
+		grade="A";
+	}
+	else if((score >= 60) && (score < 70)){
+		grade="B";
+	}
+	else if((score >= 50) && (score < 60)){
+		grade="C";
+	}
+	else if((score >= 45) && (score < 50)){
+		grade="D";
+	}
+	else if((score >= 40) && (score < 45)){
+		grade="E";
+	}
+	else if((score >=0) && (score < 40)){
+		grade="F";
+	}
+	else{
+		grade="N/A"
+	}
+	
+
+	document.getElementById('secondGrade').value = grade
+	}
+
+
+
+	//THIRD SCORE AND GRADE
+	function showScoreThree() {
+	var score = parseFloat(document.getElementById('thirdScore').value);
+
+	var grade;
+
+	if((score>=70) && (score<=100)){
+		grade="A";
+	}
+	else if((score >= 60) && (score < 70)){
+		grade="B";
+	}
+	else if((score >= 50) && (score < 60)){
+		grade="C";
+	}
+	else if((score >= 45) && (score < 50)){
+		grade="D";
+	}
+	else if((score >= 40) && (score < 45)){
+		grade="E";
+	}
+	else if((score >=0) && (score < 40)){
+		grade="F";
+	}
+	else{
+		grade="N/A"
+	}
+
+	document.getElementById('thirdGrade').value = grade
+	}
+
+
+
+	//FOURTH SCORE AND GRADE
+	function showScoreFour() {
+	var score = parseFloat(document.getElementById('fourthScore').value);
+
+	var grade;
+
+	if((score>=70) && (score<=100)){
+		grade="A";
+	}
+	else if((score >= 60) && (score < 70)){
+		grade="B";
+	}
+	else if((score >= 50) && (score < 60)){
+		grade="C";
+	}
+	else if((score >= 45) && (score < 50)){
+		grade="D";
+	}
+	else if((score >= 40) && (score < 45)){
+		grade="E";
+	}
+	else if((score >=0) && (score < 40)){
+		grade="F";
+	}
+	else{
+		grade="N/A"
+	}
+
+	document.getElementById('fourthGrade').value = grade
+	}
+
+
+
+	//FIFTH SCORE AND GRADE
+	function showScoreFive() {
+	var score = parseFloat(document.getElementById('fifthScore').value);
+
+	var grade;
+
+	if((score>=70) && (score<=100)){
+		grade="A";
+	}
+	else if((score >= 60) && (score < 70)){
+		grade="B";
+	}
+	else if((score >= 50) && (score < 60)){
+		grade="C";
+	}
+	else if((score >= 45) && (score < 50)){
+		grade="D";
+	}
+	else if((score >= 40) && (score < 45)){
+		grade="E";
+	}
+	else if((score >=0) && (score < 40)){
+		grade="F";
+	}
+	else{
+		grade="N/A"
+	}
+
+	document.getElementById('fifthGrade').value = grade
+	}
+
+
+
+
+	//CALCULATION OF TOTAL AND AVERAGE
+  	function calculateTotalAndAverage() {
+            var scoreOne = parseFloat(document.getElementById("firstScore").value);
+            var scoreTwo = parseFloat(document.getElementById("secondScore").value);
+            var scoreThree = parseFloat(document.getElementById("thirdScore").value);
+            var scoreFour = parseFloat(document.getElementById("fourthScore").value);
+            var scoreFive = parseFloat(document.getElementById("fifthScore").value);
+            
+            var totalScore = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+            var averageScore = totalScore / 5;
+            
+            document.getElementById("totalScore").innerHTML = totalScore;
+            document.getElementById("averageScore").innerHTML = averageScore;
+          
+           
+           //REMARKS
+        var remark = "";
+            if (averageScore > 50) {
+                remark = "Proud of you! <span class='emoji'>&#128512;</span> ";
+            } else {
+                remark = "You disappointed your teacher! <span class='emoji'>&#128546;</span>";
+            }
+
+            document.getElementById("remark").innerHTML=remark;
+            
+        }
+
+
+  
+    
+
+
+
+</script>
+</body>
+</html>
